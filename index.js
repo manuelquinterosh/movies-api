@@ -9,6 +9,7 @@ const { logErrors, wrapErrors, errorHandler } = require('./utils/middleware/erro
 
 const notFoundHandler = require('./utils/middleware/notFoundHandler');
 
+
 // body parser
 app.use(express.json()); //Cuando le enviemos datos en formato json pueda interpretarlos
 
@@ -22,8 +23,6 @@ app.use(logErrors);
 app.use(wrapErrors);
 app.use(errorHandler);
 
-// Uso de cors para la seguridad
-app.use(corsHandler());
 
 /**app.get('/', function(req, res) {
     res.send("hello world");
