@@ -22,6 +22,9 @@ app.use(logErrors);
 app.use(wrapErrors);
 app.use(errorHandler);
 
+// Uso de cors para la seguridad
+app.use(corsHandler());
+
 /**app.get('/', function(req, res) {
     res.send("hello world");
 });
